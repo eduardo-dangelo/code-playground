@@ -1,0 +1,53 @@
+.todo-box {
+    background: white;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin: 30px;
+    max-width: 400px;
+    box-shadow: 22px 22px 6px rgba(0,0,0,0.5);
+}
+
+.header, .todo-item {
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid;
+}
+
+.button {
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+    background: green;
+    color: white;
+    border: 1px solid gray;
+}
+
+.button:hover {
+    background: darkgreen;
+    cursor: pointer;
+}
+
+.delete-button {
+    background: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    opacity: 0.7;
+}
+
+.delete-button:hover {
+    background: darkred;
+    cursor: pointer;
+}
