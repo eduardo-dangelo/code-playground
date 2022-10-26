@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react'
 
 const InputButton = ({ inputValue = '', onAdd }) => {
   const [value, setValue] = useState(inputValue)
@@ -29,7 +29,7 @@ const InputButton = ({ inputValue = '', onAdd }) => {
       />
       <button onClick={handleAdd} className="button">Add</button>
     </div>
-  );
+  )
 }
 
 export default InputButton

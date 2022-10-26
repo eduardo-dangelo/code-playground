@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState } from 'react'
 import InputButton from './InputButton'
 import './TodoList.css'
 
@@ -56,6 +56,7 @@ export const TodoList = () => {
       {data.map((item, index) => {
         return (
           <TodoItem
+            key={index}
             item={item}
             onDelete={handleDelete}
             index={index}
