@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 import { TodoList } from './components/TodoList'
 import Sidebar from './components/Sidebar'
 import { Box } from '@mui/material'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import BasicForm from './components/BasicForm'
 
 const siteData = [
   { name: 'Todo List', route: '/todo-list' },
@@ -22,6 +22,7 @@ function App() {
         <Sidebar items={siteData} />
         <Routes>
           <Route path="/todo-list" element={<TodoList />} />
+          <Route path="/basic-form" element={<BasicForm />} />
         </Routes>
       </Box>
     </Router>
