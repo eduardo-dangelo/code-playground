@@ -49,22 +49,13 @@ export const TodoList = () => {
   }
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        flex: 1,
-      }}
-    >
-      <div className="todo-box">
-        <div className="header">
-          <InputButton onAdd={handleAdd} />
-        </div>
-        {data.map((item, index) => {
-          return <TodoItem key={index} item={item} onDelete={handleDelete} index={index} onEdit={(value) => handleEdit(value, index)} />
-        })}
+    <div className="todo-box">
+      <div className="header">
+        <InputButton onAdd={handleAdd} />
       </div>
-    </Box>
+      {data.map((item, index) => {
+        return <TodoItem key={index} item={item} onDelete={handleDelete} index={index} onEdit={(value) => handleEdit(value, index)} />
+      })}
+    </div>
   )
 }
