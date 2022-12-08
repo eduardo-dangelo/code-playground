@@ -5,10 +5,12 @@ import Sidebar from './components/Sidebar'
 import { Box } from '@mui/material'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import BasicForm from './components/BasicForm'
+import Images from './components/Images'
 
 const siteData = [
-  { name: 'Todo List', route: '/todo-list' },
-  { name: 'Basic Form', route: '/basic-form' },
+  { name: 'Todo List', route: '/todo-list', element: <TodoList /> },
+  { name: 'Basic Form', route: '/basic-form', element: <BasicForm /> },
+  { name: 'Images', route: '/images', element: <Images /> },
 ]
 
 function App() {
@@ -29,8 +31,9 @@ function App() {
           }}
         >
           <Routes>
-            <Route path="/todo-list" element={<TodoList />} />
-            <Route path="/basic-form" element={<BasicForm />} />
+            {siteData.map((item) => {
+              return <Route key={item.route} path={item.route} element={item.element} />
+            })}
           </Routes>
         </Box>
       </Box>
